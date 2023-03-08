@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SmallCardViewModel>
+
+<section class="productgrid container">
+    <div class="container">
+        <div class="title">
+            <p>Best Collection</p>
+        </div>
+        <div class="categories">
+            <a asp-controller="Products" class="categorylink">All</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Bags</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Dress</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Decoration</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Essentials</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Interior</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Laptop</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Mobile</a>
+            <p>/</p>
+            <a asp-controller="Products" class="categorylink">Beauty</a>
+            <p>/</p>
+        </div>
+        <div class="products">
+            @foreach (var product in Model)
+            {
+                <partial name="~/Views/Shared/Partials/_SmallCardPartial.cshtml" model="product" />
+            }
+        </div>
+        <div class="btn">
+            <button>LOAD MORE  <i class="fa-regular fa-arrow-rotate-right"></i></button>
+        </div>
+    </div>
+</section>

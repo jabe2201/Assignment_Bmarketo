@@ -1,0 +1,8 @@
+﻿@model IEnumerable<LargeCardViewModel>
+
+    <section class="productgridmp container">
+        @foreach(var product in Model)
+        {
+            <partial name="~/Views/Shared/Partials/_LargeCardPartial.cshtml" model="product" />
+        }   
+    </section>

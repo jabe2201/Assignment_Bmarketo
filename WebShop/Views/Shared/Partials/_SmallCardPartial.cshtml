@@ -1,0 +1,33 @@
+﻿@model SmallCardViewModel
+
+<a class="product-link" asp-controller="Home" asp-action="Index">
+    <div class="productsmall">
+        <img src="@Model.ImageSrc" alt="@Model.ImageSrc" />
+        <div class="productname">
+            <p>@Model.Name</p>
+        </div>
+        @if (@Model.DiscountPrice != 0)
+        {
+            <div class="priceinfo">
+                <div class="price">
+                    <p class="discount">$@Model.Price</p>
+                    <p>$@Model.DiscountPrice</p>
+                </div>
+                <div class="carticon">
+                    <i class="fa-regular fa-cart-plus"></i>
+                </div>
+                </div>
+        }
+        else
+        {
+                <div class="priceinfo">
+                    <div class="price">
+                        <p>$@Model.Price</p>
+                    </div>
+                    <div class="carticon">
+                        <i class="fa-regular fa-cart-plus"></i>
+                    </div>
+                </div>
+        }
+    </div>
+</a>

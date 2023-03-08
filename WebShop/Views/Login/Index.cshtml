@@ -1,0 +1,51 @@
+﻿@model LoginForm
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_CenterScreen.cshtml";
+}
+
+<section class="login-form">
+    <div class="login-container">
+        <form method="post" asp-action="Index" asp-route-ReturnUrl="@Model.ReturnUrl">
+            <div class="loginform">
+                <div class="grid-item">
+                    Please Login to Your Account
+                    <div class="line"></div>
+                </div>
+                <div class="grid-item">
+                    <div class="flex">
+                        <p>
+                            E-mail*
+                        </p>
+                        <a asp-controller="Register" asp-action="Index" class="link">
+                            Don't have an Account yet?
+                        </a>
+                    </div>
+                    <input asp-for="Email" />
+                </div>
+                <div class="grid-item">
+                    <div class="password">
+                        <p>
+                            Password*
+                        </p>
+                        <a asp-controller="Home" asp-action="Index" class="link passwordlink">
+                            Forgot your password?
+                        </a>
+                    </div>
+                    <input asp-for="Password" />
+                </div>
+                <div class="grid-item row-4 flex">
+                    <div class="inputstyle">
+                        <input type="checkbox" />
+                        <span class="checkboxstyle"></span>
+                    </div>
+                    <p>Please keep me logged in</p>
+                </div>
+                <div class="grid-item row-5">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

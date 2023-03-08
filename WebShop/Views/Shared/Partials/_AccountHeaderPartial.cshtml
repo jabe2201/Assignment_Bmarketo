@@ -1,0 +1,21 @@
+﻿<header>
+    <section class="header container">
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.svg" /></a>
+        </div>
+        <div class="menu">
+            <nav>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                            <a class="menu-link-icon" asp-controller="Account" asp-action="Index"><i class="fa-regular fa-user"></i>
+                            </a>
+                }
+                else
+                {
+                            <a class="menu-link-icon" asp-controller="Login" asp-action="Index">Login</a>
+                }
+                <a class="menu-link-icon" asp-controller="Home" asp-action="Index"><i class="fa-regular fa-bag-shopping"></i></a>
+            </nav>
+        </div>
+    </section>
+</header>

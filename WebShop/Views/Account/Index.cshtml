@@ -1,0 +1,76 @@
+﻿@model AccountViewModel
+
+@{
+    ViewData["Title"] = "Profile Page";
+    Layout = "~/Views/Shared/_Layout_CenterScreen.cshtml";
+}
+
+<section class="profile-form">
+    <div class="profile-padding">
+        <div class="profile-container">
+            <div class="grid-item picture">
+                <img src="~/images/profile.jpg" alt="" />
+            </div>
+            <div class="grid-item upload">
+                <a asp-controller="Home" asp-action="Index">Upload picture</a>
+            </div>
+            <div class="grid-item firstname">
+                <p>First Name</p>
+                <input asp-for="FirstName" placeholder="@Html.DisplayNameFor(m => m.FirstName)" />
+            </div>
+            <div class="grid-item lastname">
+                <p>Last Name</p>
+                <input asp-for="LastName" placeholder="@Html.DisplayNameFor(m => m.LastName)" />
+            </div>
+            <div class="grid-item email">
+                <p>E-mail</p>
+                <input asp-for="Email" placeholder="@Html.DisplayNameFor(m => m.Email)" />
+            </div>
+            <div class="grid-item phone">
+                @if (Model.PhoneNumber == null)
+                {
+                    <p>Phone</p>
+                    <input asp-for="PhoneNumber" placeholder="" />
+                }
+                else
+                {
+                    <p>Phone</p>
+                    <input asp-for="PhoneNumber" placeholder="@Html.DisplayNameFor(m => m.PhoneNumber)" />
+                }
+            </div>
+            <div class="address">
+                <div class="grid-item streetname">
+                    <p>Street Name</p>
+                    <input asp-for="StreetName" placeholder="@Html.DisplayNameFor(m => m.StreetName)" />
+                </div>
+                <div class="grid-item postalcode">
+                    <p>Postal Code</p>
+                    <input asp-for="PostalCode" placeholder="@Html.DisplayNameFor(m => m.PostalCode)" />
+                </div>
+                <div class="grid-item city">
+                    <p>City</p>
+                    <input asp-for="City" placeholder="@Html.DisplayNameFor(m => m.City)" />
+                </div>
+            </div>
+            <div class="grid-item company">
+                @if (Model.Company == null)
+                {
+                    <p>Company</p>
+                    <input asp-for="Company" placeholder="" />
+                }
+                else
+                {
+                    <p>Company</p>
+                    <input asp-for="Company" placeholder="@Html.DisplayNameFor(m => m.Company)" />
+                }
+            </div>
+            <div class="grid-item update">
+                <button class="button">UPDATE</button>
+            </div>
+            <div class="grid-item signout">
+                <a class="button" asp-controller="Login" asp-action="Logout">SIGN OUT</a>
+            </div>
+        </div>
+    </div>
+
+</section>

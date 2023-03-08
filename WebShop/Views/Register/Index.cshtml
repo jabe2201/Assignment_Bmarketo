@@ -1,0 +1,88 @@
+﻿@model RegisterForm
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_CenterScreen.cshtml";
+}
+
+<section class="register-form">
+    <div class="registration-form-container">
+        <form method="post" asp-action="Index" asp-route-ReturnUrl="@Model.ReturnUrl" novalidate>
+            <div class="registration-form">
+                <div class="registration-form-container">
+                    <div class="form-layout">
+                        <div class="grid-item grid-item1">
+                            <p>Please Register Your New Account</p>
+                            <div class="line"></div>
+                        </div>
+                        <div class="grid-item grid-item2">
+                            <p>First Name*</p>
+                            <input asp-for="FirstName" />
+                            <span asp-validation-for="FirstName" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item3">
+                            <p>Last Name*</p>
+                            <input asp-for="LastName" />
+                            <span asp-validation-for="LastName" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item4">
+                            <p>Street Name*</p>
+                            <input asp-for="StreetName" />
+                            <span asp-validation-for="StreetName" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item5">
+                            <p>Postal Code*</p>
+                            <input asp-for="PostalCode" />
+                            <span asp-validation-for="PostalCode" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item6">
+                            <p>City*</p>
+                            <input asp-for="City" />
+                            <span asp-validation-for="City" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item7">
+                            <p>Mobile (optional)</p>
+                            <input asp-for="PhoneNumber" />
+                        </div>
+                        <div class="grid-item grid-item8">
+                            <p>Company (optional)</p>
+                            <input asp-for="Company" />
+                        </div>
+                        <div class="grid-item grid-item9">
+                            <p>E-mail*</p>
+                            <input asp-for="Email" />
+                            <span asp-validation-for="Email" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item10">
+                            <p>Password*</p>
+                            <input asp-for="Password" />
+                            <span asp-validation-for="Password" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item11">
+                            <p>Confirm Password*</p>
+                            <input asp-for="ConfirmPassword" />
+                            <span asp-validation-for="ConfirmPassword" class="error"></span>
+                        </div>
+                        <div class="grid-item grid-item12">
+                            <p>Upload Profile Image (optional)</p>
+                            <input />
+                        </div>
+                        <div class="grid-item grid-item13">
+                            <div class="inputstyle">
+                                <input type="checkbox" asp-for="TermsAndAggreements" />
+                                <span asp-validation-for="TermsAndAggreements" class="error"></span>
+                            </div>
+                            <p>I have read and accepts the terms and agreements</p>
+                        </div>
+                        <div class="grid-item grid-item14">
+                            <button type="submit">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+

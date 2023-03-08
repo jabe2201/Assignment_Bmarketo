@@ -1,0 +1,13 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<partial name="~/Views/Shared/Partials/_ShowcasePartial.cshtml" />
+<partial name="~/Views/Shared/Partials/_BestCollectionPartial.cshtml" model=@Model.BestCollection />
+<partial name="~/Views/Shared/Partials/_DiscountShowCasePartial.cshtml" model=@Model.DiscountShowcase />
+<partial name="~/Views/Shared/Partials/_CarouselPartial.cshtml" model=@Model.CarouselCollection />
+<partial name="~/Views/Shared/Partials/_PopularCollectionPartial.cshtml" model=@Model.PopularCollection />
+<partial name="~/Views/Shared/Partials/_NewsLetterPartial.cshtml" />

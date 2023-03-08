@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MediumCardViewModel>
+
+<section class="discountshowcase">
+    <div class="discountAd container">
+        <partial name="~/Views/Shared/Partials/_MediumCardPartial.cshtml" model="Model.ElementAt(0)" />
+        <div class="showcasecard">
+            <p class="title-1 showcasecardslot">SALES BEAUTY</p>
+            <p class="title-2 showcasecardslot">50% OFF</p>
+            <p class="title-3 showcasecardslot">Get The Best Price</p>
+            <p class="text showcasecardslot">Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</p>
+            <p class="title-4 showcasecardslot">Discover More</p>
+        </div>
+        <partial name="~/Views/Shared/Partials/_MediumCardPartial.cshtml" model="Model.ElementAt(1)" />
+    </div>
+</section>
